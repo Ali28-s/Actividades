@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+<header>
+
+    <h1>Shift Left Security</h1>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="introduccion.html">Introducción</a></li>
+            <li><a href="definicion.html">¿Qué es?</a></li>
+            <li><a href="problema.html">Problema</a></li>
+            <li><a href="sprints.html">Sprints Ágiles</a></li>
+            <li><a href="ejemplo.html">Ejemplos</a></li>
+            <li><a href="analisis.html">Análisis</a></li>
+            <li><a href="reflexion.html">Reflexión</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<main>
+
+    <h2>Ejemplo Aplicado</h2>
+
+    <h3>Grupo 4 - Subida Insegura de Archivos</h3>
+
+    <p>
+        El siguiente código permite cargar archivos sin validar el nombre,
+        extensión o contenido, lo que puede representar un riesgo de seguridad.
+    </p>
+
+    <pre>
+String fileName = request.getParameter("fileName");
+
+File file = new File("/uploads/" + fileName);
+FileOutputStream fos = new FileOutputStream(file);
+
+fos.write(request.getInputStream().readAllBytes());
+fos.close();
+    </pre>
+
+</main>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
